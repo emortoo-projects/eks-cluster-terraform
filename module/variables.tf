@@ -24,6 +24,7 @@ variable "private-rt-name" {}
 variable "eip-name" {}
 variable "ngw-name" {}
 variable "eks-sg" {}
+variable "ec2-sg" {}
 
 #IAM
 variable "is_eks_role_enabled" {

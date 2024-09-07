@@ -23,13 +23,12 @@ variable "key_pair" {
   default = "my-key-pair"
 }
 
-# variable "security_group" {
-#   description = "Jenkins security group"
-#   type = string
-# }
+variable "ec2-sg" {
+  description = "Jenkins security group"
+  # type = string
+}
 
 variable "subnet_id" {
-  type = string
 }
 
 # variable "iam_instance_profile" {

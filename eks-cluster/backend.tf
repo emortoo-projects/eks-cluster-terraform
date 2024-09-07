@@ -6,13 +6,13 @@ terraform {
       version = "~> 5.49.0"
     }
   }
-  backend "s3" {
-    bucket         = "my-terraform-remote-backend-s3"
-    region         = "us-east-1"
-    key            = "mean-stack-application/dev/eks-terraform/terraform.tfstate"
-    dynamodb_table = "eks-terraform-lock-files"
-    encrypt        = true
-  }
+  # backend "s3" {
+  #   bucket         = "my-terraform-remote-backend-s3"
+  #   region         = "us-east-1"
+  #   key            = "mean-stack-application/dev/eks-terraform/terraform.tfstate"
+  #   dynamodb_table = "eks-terraform-lock-files"
+  #   encrypt        = true
+  # }
 }
 
 provider "aws" {

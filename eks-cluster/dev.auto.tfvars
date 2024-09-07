@@ -19,6 +19,7 @@ private-rt-name       = "eks-private-route-table"
 eip-name              = "eks-elasticip-ngw"
 ngw-name              = "eks-ngw"
 eks-sg                = "eks-sg"
+ec2-sg                = "ec2-sg"
 
 # EKS
 is-eks-cluster-enabled     = true

@@ -24,6 +24,7 @@ module "eks" {
   eip-name              = "${local.env}-${local.org}-${var.eip-name}"
   ngw-name              = "${local.env}-${local.org}-${var.ngw-name}"
   eks-sg                = var.eks-sg
+  ec2-sg                = var.ec2-sg
 
   is_eks_role_enabled           = true
   is_eks_nodegroup_role_enabled = true
@@ -46,5 +47,6 @@ module "eks" {
 module "jump-server" {
   source    = "../jump-server"
   subnet_id = module.eks.public_subnet_ids.id
+  ec2-sg =  module.eks.ec2-security_group.id
 
 }
